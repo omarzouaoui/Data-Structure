@@ -3,11 +3,19 @@ var Tree = function (value) {
   this.children = [];
 };
 
-Tree.prototype.addChild = function (val) {};
+Tree.prototype.addChild = function (val) {
+  var newData=new Tree(val)
+  this.children.push(newData)
+};
 
-Tree.prototype.contains = function (target) {};
-
-Tree.prototype.traverse = function (callBack) {};
-/*
- * Complexity: What is the time complexity of the above functions?
- */
+Tree.prototype.contains = function (target) {
+  if(this.value === target){
+    return true
+  }
+  for(var i=0;i<this.children.length;i++){
+    if(this.children[i].contains(target)){
+      return true
+    }
+  }
+  return false   
+};
