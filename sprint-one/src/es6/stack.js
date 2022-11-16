@@ -1,11 +1,25 @@
 class Stack {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
-  constructor() {}
+  constructor() {
+    this.object={};
+    this.key=0;
+  }
 
-  push(value) {}
+  push(value) {
+    this.key++
+    return this.object[this.key]=value
+  }
 
-  pop() {}
+  pop() {
+    if(this.key === 0){
+      return null
+    }
+    var deleted=this.object[this.key]
+    delete this.object[this.key]
+    this.key--
+    return deleted
+  }
 
-  size() {}
+  size() {
+    return this.key
+  }
 }
