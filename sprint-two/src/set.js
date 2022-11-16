@@ -3,9 +3,15 @@ class Set {
     this._storage = {};
   }
 
-  add(item) {}
+  add(item) {
+    this._storage[item]=true;
+  }
   
-  contains(item) {}
+  contains(item) {
+    return !!this._storage[item]
+  }
 
-  remove(item) {}
+  remove(item) {
+    delete this._storage[item]
+  }
 }
