@@ -29,15 +29,10 @@ class BinarySearchTree {
   
   depthFirstLog(callBack) {
     callBack(this.value)
-    if (this.right) {
-      this.right.depthFirstLog(callBack);
-    }if (this.left) {
+    if (this.left) {
       this.left.depthFirstLog(callBack);
+    }if (this.right) {
+      this.right.depthFirstLog(callBack);
     }
   }
 }
-
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */

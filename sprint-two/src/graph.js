@@ -1,10 +1,15 @@
 // Instantiate a new graph
 var Graph = function () {
   this._nodes = {};
+  this.key=0;
 };
 
 // Add a node to the graph, passing in the node's value.
-Graph.prototype.addNode = function (node) {};
+Graph.prototype.addNode = function (node) {
+  var newG = this.nodes[this.key]=node
+  this.key++
+  return
+};
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function (node) {};
